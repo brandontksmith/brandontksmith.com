@@ -2,8 +2,6 @@ FROM node:lts-alpine as builder
 
 WORKDIR /app
 
-RUN npm install -g yarn
-
 COPY ./package.json /app/package.json
 COPY ./yarn.lock /app/yarn.lock
 
