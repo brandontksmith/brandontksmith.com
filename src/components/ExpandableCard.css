@@ -23,7 +23,11 @@
   border-top: 4px solid #fcbf1e;
 }
 
-.expandable-card .header, .expandable-card .body {
+.expandable-card .header {
+  padding: 10px;
+}
+
+.expandable-card .body {
   padding: 10px;
 }
 
@@ -46,6 +50,28 @@
   text-align: right;
 }
 
-.expandable-card .body {
-  padding-top: 10px;
+.expandable-card .body.fade-enter {
+  max-height: 0;
+  opacity: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.expandable-card .body.fade-enter-active {
+  max-height: 500px;
+  opacity: 1;
+  transition: all 500ms;
+}
+
+.expandable-card .body.fade-exit {
+  max-height: 500px;
+  opacity: 1;
+}
+
+.expandable-card .body.fade-exit-active {
+  max-height: 0;
+  opacity: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  transition: all 500ms;
 }
