@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 import './ExpandableCard.css';
-import ChevronDown from '../assets/chevron-down.svg';
+
 import ChevronRight from '../assets/chevron-right.svg';
 
 const classnames = require('classnames');
@@ -33,11 +33,16 @@ const ExpandableCard = ({ title, color, children }) => {
     'fade-enter': expanded && !isExpanding
   });
 
+  const expandClassNames = classnames('expand', {
+    'rotate-90': !expanded,
+    'rotate-0': expanded
+  });
+
   return (
     <div className={ classNames }>
       <div className="header" onClick={ toggleCard }>
         <div className="title">{ title }</div>
-        <img className="expand" src={ expanded ? ChevronDown : ChevronRight } width="12" height="12" />
+        <img className={ expandClassNames } src={ ChevronRight } width="12" height="12" />
       </div>
 
       <div className={ bodyClassNames }>{ children }</div>
