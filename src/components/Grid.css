@@ -1,0 +1,24 @@
+.row {
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+}
+
+.col {
+  flex: 1;
+  padding: 0 10px 0 0;
+}
+
+@media screen and (max-width: 420px) {
+  .row {
+    flex-direction: column;
+  }
+
+  .col {
+    padding: 0;
+  }
+}
+
+.col:last-of-type {
+  padding: 0;
+}

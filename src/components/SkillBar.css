@@ -1,0 +1,29 @@
+.skill-bar-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.skill-bar-wrapper .icon {
+  padding-right: 5px;
+  min-width: 32px;
+  text-align: center;
+}
+
+.skill-bar-wrapper .skill-bar {
+  height: 8px;
+  width: 100%;
+  border: 1px solid green;
+  display: relative;
+}
+
+.skill-bar-wrapper .skill-bar .inner-bar {
+  height: 8px;
+  background: green;
+  margin-bottom: 2px;
+}
+
+.skill-bar-wrapper .skill-bar .weight-label {
+  font-size: 9px;
+  text-align: right;
+}

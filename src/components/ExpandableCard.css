@@ -1,0 +1,51 @@
+.expandable-card {
+  background: #FFFFFF;
+  overflow: hidden;
+  border-left: 1px solid rgba(0, 0, 0, 0.10);
+  border-right: 1px solid rgba(0, 0, 0, 0.10);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.10);
+  margin: 10px;
+}
+
+.expandable-card, .expandable-card.default {
+  border-top: 4px solid #035aa6;
+}
+
+.expandable-card.primary {
+  border-top: 4px solid #120136;
+}
+
+.expandable-card.secondary {
+  border-top: 4px solid #40bad5;
+}
+
+.expandable-card.warning {
+  border-top: 4px solid #fcbf1e;
+}
+
+.expandable-card .header, .expandable-card .body {
+  padding: 10px;
+}
+
+.expandable-card .header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background: #FFFFFF;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.15);
+}
+
+.expandable-card .header .title {
+  font-weight: 700;
+  text-align: left;
+  flex: 1;
+  color: #120136;
+}
+
+.expandable-card .header .expand {
+  text-align: right;
+}
+
+.expandable-card .body {
+  padding-top: 10px;
+}
