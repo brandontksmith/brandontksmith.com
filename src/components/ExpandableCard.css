@@ -29,6 +29,7 @@
 
 .expandable-card .body {
   padding: 10px;
+  overflow: hidden;
 }
 
 .expandable-card .header {
@@ -81,6 +82,7 @@
   opacity: 0;
   padding-top: 0;
   padding-bottom: 0;
+  overflow: hidden;
 }
 
 .expandable-card .body.fade-enter-active {
@@ -99,5 +101,6 @@
   opacity: 0;
   padding-top: 0;
   padding-bottom: 0;
+  overflow: hidden;
   transition: all 500ms;
 }
