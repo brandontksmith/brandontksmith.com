@@ -1,6 +1,10 @@
 .row {
   display: flex;
   flex-direction: row;
+  padding: 10px 10px 0 10px;
+}
+
+.row:last-of-type {
   padding: 10px;
 }
 

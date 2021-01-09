@@ -10,6 +10,12 @@ import ProfileCard from './components/ProfileCard';
 import SkillBar from './components/SkillBar';
 
 function App() {
+  let bodyStyle = {
+    'display': 'flex',
+    'flex-direction': 'row',
+    'justify-content': 'space-around'
+  };
+
   return (
     <div className="App">
       <div className="header">
@@ -47,21 +53,21 @@ function App() {
 
           <Grid.Column>
             <ExpandableCard title="Frameworks & Languages" color="secondary">
-              <SkillBar icon={ faNode } weight={ 7 } color="#6a9e66" />
+              <SkillBar icon={ faNode } weight={ 8 } color="#6a9e66" />
               <SkillBar icon={ faJs } weight={ 10 } color="#e4a138" />
               <SkillBar icon={ faPython } weight={ 6 } color="#feda5b" />
               <SkillBar icon={ faPhp } weight={ 5 } color="#566693" />
-              <SkillBar icon={ faJava } weight={ 4 } color="#0f768e" />
+              <SkillBar icon={ faJava } weight={ 5 } color="#0f768e" />
               <SkillBar icon={ faHtml5 } weight={ 10 } color="#e35230" />
               <SkillBar icon={ faCss3Alt } weight={ 10 } color="#1875B6" />
               <SkillBar icon={ faReact } weight={ 10 } color="#67dbf9" />
               <SkillBar icon={ faAngular } weight={ 5 } color="#c10933" />
               <SkillBar icon={ faVuejs } weight={ 5 } color="#47b785" />
-              <SkillBar icon={ faLaravel } weight={ 4 } color="#FC312D" />
+              <SkillBar icon={ faLaravel } weight={ 5 } color="#FC312D" />
               <SkillBar icon={ faEmber } weight={ 5 } color="#de4f3f" />
             </ExpandableCard>
 
-            <ExpandableCard title="Tools / Other" color="warning">
+            <ExpandableCard title="Tools / Other" color="warning" bodyStyle={ bodyStyle }>
               <FontAwesomeIcon icon={ faDocker } color="#2e98ea" size="lg" />
               <FontAwesomeIcon icon={ faAws } color="#fd9927" size="lg" />
               <FontAwesomeIcon icon={ faBootstrap } color="#7955b1" size="lg" />
@@ -72,6 +78,24 @@ function App() {
               <FontAwesomeIcon icon={ faJenkins } color="#d13a39" size="lg" />
               <FontAwesomeIcon icon={ faLinode } color="#29b260" size="lg" />
               <FontAwesomeIcon icon={ faDigitalOcean } color="#136dfb" size="lg" />
+            </ExpandableCard>
+          </Grid.Column>
+        </Grid.Row>
+
+        <Grid.Row>
+          <Grid.Column>
+            <ExpandableCard title="Notable Projects & Integrations" color="danger">
+              <ul>
+                <li>
+                  <a href="https://technical.ly/baltimore/2019/07/19/masschallenge-fintech-accelerator-pinkaloo-launches-charitable-giving-pilot-eastern-bank/">Eastern Bank Give for Good (Charitable Giving Pilot)</a><br />
+                  <span>Worked with the COO of Pinkaloo and leaders at Eastern Labs (part of Eastern Bank) to integrate Pinkaloo's Charitable Giving Platform in the Core Banking of Eastern Bank. Today, Give for Good is available on Web and Mobile to all customers at Eastern Bank.</span>
+                </li>
+
+                <li>
+                  <a href="https://apps.adp.com/en-US/apps/245151/modern-giving-by-pinkaloo-for-run-powered-by-adp/overview">Modern Giving by Pinkaloo for RUN Powered by ADP</a><br />
+                  <span>Integrated with ADP RUN to bring Pinkaloo's Charitable Giving Platform to organizations via the ADP Marketplace. Through the click of a button in the ADP Marketplace, organizations can provide engaging and automated workplace giving benefits to their employees.</span>
+                </li>
+              </ul>
             </ExpandableCard>
           </Grid.Column>
         </Grid.Row>

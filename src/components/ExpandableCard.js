@@ -6,7 +6,7 @@ import ChevronRight from '../assets/chevron-right.svg';
 
 const classnames = require('classnames');
 
-const ExpandableCard = ({ title, color, children }) => {
+const ExpandableCard = ({ title, color, children, bodyStyle = {} }) => {
   const [expanded, setExpanded] = useState(false);
   const [isExpanding, setIsExpanding] = useState(false);
 
@@ -23,9 +23,10 @@ const ExpandableCard = ({ title, color, children }) => {
     default: color !== 'primary' && color !== 'secondary',
     primary: color === 'primary',
     secondary: color === 'secondary',
-    warning: color === 'warning'
+    warning: color === 'warning',
+    danger: color === 'danger'
   });
-
+  
   const bodyClassNames = classnames('body', {
     'fade-exit-active': expanded && isExpanding,
     'fade-exit': !expanded && !isExpanding,
@@ -45,7 +46,7 @@ const ExpandableCard = ({ title, color, children }) => {
         <img className={ expandClassNames } src={ ChevronRight } width="12" height="12" />
       </div>
 
-      <div className={ bodyClassNames }>{ children }</div>
+      <div className={ bodyClassNames } style={ bodyStyle }>{ children }</div>
     </div>
   )
 }

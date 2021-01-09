@@ -4,7 +4,11 @@
   border-left: 1px solid rgba(0, 0, 0, 0.10);
   border-right: 1px solid rgba(0, 0, 0, 0.10);
   border-bottom: 1px solid rgba(0, 0, 0, 0.10);
-  margin: 10px;
+  margin-bottom: 10px;
+}
+
+.expandable-card:last-of-type {
+  margin-bottom: 0;
 }
 
 .expandable-card, .expandable-card.default {
@@ -21,6 +25,10 @@
 
 .expandable-card.warning {
   border-top: 4px solid #fcbf1e;
+}
+
+.expandable-card.danger {
+  border-top: 4px solid #BF1037;
 }
 
 .expandable-card .header {
@@ -103,4 +111,12 @@
   padding-bottom: 0;
   overflow: hidden;
   transition: all 500ms;
+}
+
+.expandable-card .body ul li {
+  margin-bottom: 10px;
+}
+
+.expandable-card .body ul li:last-of-type {
+  margin-bottom: 0;
 }
