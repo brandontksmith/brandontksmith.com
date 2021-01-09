@@ -22,7 +22,7 @@ function App() {
         <div style={{ display: "inline-block" }}>
           <ProfileCard
             image="./profile.jpeg"
-            name="Brandon T. K. Smith"
+            name="Brandon Smith"
             title="Software Engineer"
             company="T. Rowe Price"
             location="Washington DC-Baltimore Area"
@@ -99,6 +99,12 @@ function App() {
             </ExpandableCard>
           </Grid.Column>
         </Grid.Row>
+      </div>
+
+      <div className="footer">
+        <div className="copyright">
+          Copyright &copy; 2021 Brandon Smith - All Rights Reserved.
+        </div>
       </div>
     </div>
   );
