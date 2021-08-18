@@ -23,9 +23,8 @@ function App() {
           <ProfileCard
             image="./profile.jpeg"
             name="Brandon Smith"
-            title="Software Engineer"
-            company="T. Rowe Price"
-            location="Washington DC-Baltimore Area"
+            title="Senior Software Engineer"
+            location="Sarasota, FL"
             linkedInUrl="https://www.linkedin.com/in/brandontksmith/"
             githubUrl="https://github.com/brandontksmith"
             email="btks@brandontksmith.com"

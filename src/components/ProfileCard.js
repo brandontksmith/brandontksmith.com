@@ -7,6 +7,8 @@ import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons'
 import { faMapMarkerAlt, faBriefcase, faPhoneSquareAlt, faEnvelope } from '@fortawesome/free-solid-svg-icons'
 
 const ProfileCard = ({ image, name, title, company, location, linkedInUrl, githubUrl, email, phone }) => {
+  const visibleTitle = title && company ? `${ title } at ${ company }` : title
+
   return (
     <div className="profile-card">
       <div className="col-1">
@@ -20,8 +22,8 @@ const ProfileCard = ({ image, name, title, company, location, linkedInUrl, githu
 
       <div className="col-2">
         <h1 className="name">{ name }</h1>
-        <div className="title"><FontAwesomeIcon icon={ faBriefcase } size="sm" /> { title } at { company }</div>
-        <div className="location"><FontAwesomeIcon icon={ faMapMarkerAlt } size="sm" /> { location }</div>
+        <div className="title"><FontAwesomeIcon icon={ faBriefcase } size="sm" fixedWidth /> { visibleTitle }</div>
+        <div className="location"><FontAwesomeIcon icon={ faMapMarkerAlt } size="sm" fixedWidth /> { location }</div>
       </div>
     </div>
   );
